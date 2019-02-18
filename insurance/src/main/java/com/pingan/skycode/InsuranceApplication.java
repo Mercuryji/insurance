@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.pingan.skycode.mapper")
+@MapperScan("com.pingan.skycode.personcenter.mapper")
 
 public class InsuranceApplication {
 

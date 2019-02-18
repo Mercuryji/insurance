@@ -1,4 +1,4 @@
-package com.pingan.skycode.dfo;
+package com.pingan.skycode.personcenter.dfo;
 
 /**
  * @ClassName: User

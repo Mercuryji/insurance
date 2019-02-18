@@ -1,7 +1,7 @@
-package com.pingan.skycode.service;
+package com.pingan.skycode.personcenter.service;
 
-import com.pingan.skycode.dfo.User;
-import com.pingan.skycode.mapper.TestMapper;
+import com.pingan.skycode.personcenter.dfo.User;
+import com.pingan.skycode.personcenter.mapper.TestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
