@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.pingan.skycode.mapper.TestMapper" >
+<mapper namespace="com.pingan.skycode.personcenter.mapper.TestMapper" >
 
-    <resultMap id="baseResultMap" type="com.pingan.skycode.dfo.User" >
+    <resultMap id="baseResultMap" type="com.pingan.skycode.personcenter.dfo.User" >
     <id column="account" property="account" jdbcType="VARCHAR" />
     </resultMap>
 <select id="test"  parameterType="java.lang.String" resultMap="baseResultMap">
