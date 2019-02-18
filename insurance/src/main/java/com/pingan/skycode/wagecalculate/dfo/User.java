@@ -1,4 +1,4 @@
-package com.pingan.skycode.dfo;
+package com.pingan.skycode.wagecalculate.dfo;
 
 /**
  * @ClassName: User

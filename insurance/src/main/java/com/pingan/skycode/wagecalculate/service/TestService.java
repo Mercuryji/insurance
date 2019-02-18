@@ -1,7 +1,7 @@
-package com.pingan.skycode.service;
+package com.pingan.skycode.wagecalculate.service;
 
-import com.pingan.skycode.dfo.User;
-import com.pingan.skycode.mapper.TestMapper;
+import com.pingan.skycode.wagecalculate.dfo.User;
+import com.pingan.skycode.wagecalculate.mapper.TestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

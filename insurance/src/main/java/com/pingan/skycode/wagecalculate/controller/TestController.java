@@ -1,7 +1,7 @@
-package com.pingan.skycode.controller;
+package com.pingan.skycode.wagecalculate.controller;
 
-import com.pingan.skycode.dfo.User;
-import com.pingan.skycode.service.TestService;
+import com.pingan.skycode.wagecalculate.dfo.User;
+import com.pingan.skycode.wagecalculate.service.TestService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
