@@ -58,17 +58,17 @@ public class WageCalculateService {
      */
     public BigDecimal specTaxDeductCalculate(SpecialAddDeductionDTO specialAddDeductionDTO){
         //个税专项总扣除数
-        BigDecimal specialTaxDeduct = null;
+        BigDecimal specialTaxDeduct = new BigDecimal(0);
         //接受全日制教育子女扣除数
-        BigDecimal childUnderEduDeduct;
+        BigDecimal childUnderEduDeduct = new BigDecimal(0);
         //赡养老人年满60岁扣除数
-        BigDecimal oldManOverSixtyDeduct = null;
+        BigDecimal oldManOverSixtyDeduct = new BigDecimal(0);
         //接受继续教育扣除数
-        BigDecimal receiveContinuteEduDeduct = null;
+        BigDecimal receiveContinuteEduDeduct = new BigDecimal(0);
         //租房扣除数
-        BigDecimal rentHouseDeduct = null;
+        BigDecimal rentHouseDeduct = new BigDecimal(0);
         //住房贷款扣除数
-        BigDecimal houseLoanDeduct = null;
+        BigDecimal houseLoanDeduct = new BigDecimal(0);
 
         if(specialAddDeductionDTO.getChildUnderEduCount().intValue() <= 2){
             childUnderEduDeduct = specialAddDeductionDTO.getChildUnderEduCount().multiply(Constant.CHILD_UNDER_EDU_DEDUCT);

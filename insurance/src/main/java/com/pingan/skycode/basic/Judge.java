@@ -11,11 +11,11 @@ public enum Judge {
     /**
      * YES
      */
-    YES("YES"),
+    YES("Y"),
     /**
      * NO
      */
-    NO("NO");
+    NO("N");
 
     private String status;
 

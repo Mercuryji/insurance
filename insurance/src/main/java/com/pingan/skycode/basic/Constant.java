@@ -26,11 +26,10 @@ public class Constant {
      * 个人缴纳公积金比例
      */
     public static final Double FUND_RATE_PER = 0.07;
-    //public static final Double FUND_RATE_PER = 0.07;
     /**
      * 单位缴纳养老保险比例
      */
-    public static final Double PENSION_RATE_COM = 0.22;
+    public static final Double PENSION_RATE_COM = 0.2;
     /**
      * 个人缴纳养老保险比例
      */
@@ -38,7 +37,7 @@ public class Constant {
     /**
      * 单位缴纳医疗保险比例
      */
-    public static final Double MEDICAL_RATE_COM = 0.12;
+    public static final Double MEDICAL_RATE_COM = 0.095;
     /**
      * 个人缴纳医疗保险比例
      */
@@ -46,15 +45,15 @@ public class Constant {
     /**
      * 单位缴纳失业保险比例
      */
-    public static final Double UNEMPL_RATE_COM = 0.017;
+    public static final Double UNEMPL_RATE_COM = 0.005;
     /**
      * 个人缴纳失业保险比例
      */
-    public static final Double UNEMPL_RATE_PER = 0.01;
+    public static final Double UNEMPL_RATE_PER = 0.005;
     /**
      * 单位缴纳工伤保险比例
      */
-    public static final Double INJURY_RATE_COM = 0.005;
+    public static final Double INJURY_RATE_COM = 0.002;
     /**
      * 个人缴纳工伤保险比例
      */
@@ -62,7 +61,7 @@ public class Constant {
     /**
      * 单位缴纳生育保险比例
      */
-    public static final Double MATERNITY_RATE_COM = 0.008;
+    public static final Double MATERNITY_RATE_COM = 0.01;
     /**
      * 个人缴纳生育保险比例
      */
