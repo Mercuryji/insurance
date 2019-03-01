@@ -1,14 +1,14 @@
-package com.pingan.skycode.wagecalculate.service;
+package com.skycode.insurance.wagecalculate.service;
 
-import com.pingan.skycode.basic.Constant;
-import com.pingan.skycode.basic.Judge;
-import com.pingan.skycode.basic.NewQuickDeduct;
-import com.pingan.skycode.basic.OldQuickDeduct;
-import com.pingan.skycode.wagecalculate.dfo.WagecalculateDFO;
-import com.pingan.skycode.wagecalculate.dto.NewAndOldTaxPayableDTO;
-import com.pingan.skycode.wagecalculate.dto.SalaryBasicInfoDTO;
-import com.pingan.skycode.wagecalculate.dto.SpecialAddDeductionDTO;
-import com.pingan.skycode.wagecalculate.mapper.WageCalculateMapper;
+import com.skycode.insurance.basic.Constant;
+import com.skycode.insurance.basic.Judge;
+import com.skycode.insurance.basic.NewQuickDeduct;
+import com.skycode.insurance.basic.OldQuickDeduct;
+import com.skycode.insurance.wagecalculate.dfo.WagecalculateDFO;
+import com.skycode.insurance.wagecalculate.dto.NewAndOldTaxPayableDTO;
+import com.skycode.insurance.wagecalculate.dto.SalaryBasicInfoDTO;
+import com.skycode.insurance.wagecalculate.dto.SpecialAddDeductionDTO;
+import com.skycode.insurance.wagecalculate.mapper.WageCalculateMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

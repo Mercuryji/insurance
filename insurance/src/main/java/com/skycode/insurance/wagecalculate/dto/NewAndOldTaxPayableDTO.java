@@ -1,4 +1,4 @@
-package com.pingan.skycode.wagecalculate.dto;
+package com.skycode.insurance.wagecalculate.dto;
 
 import java.math.BigDecimal;
 

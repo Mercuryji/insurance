@@ -1,10 +1,9 @@
-package com.pingan.skycode.wagecalculate.controller;
+package com.skycode.insurance.wagecalculate.controller;
 
-import com.pingan.skycode.wagecalculate.dfo.WagecalculateDFO;
-import com.pingan.skycode.wagecalculate.dto.RequestDTO;
-import com.pingan.skycode.wagecalculate.dto.SalaryBasicInfoDTO;
-import com.pingan.skycode.wagecalculate.dto.SpecialAddDeductionDTO;
-import com.pingan.skycode.wagecalculate.service.WageCalculateService;
+import com.skycode.insurance.wagecalculate.dfo.WagecalculateDFO;
+import com.skycode.insurance.wagecalculate.dto.RequestDTO;
+import com.skycode.insurance.wagecalculate.dto.SpecialAddDeductionDTO;
+import com.skycode.insurance.wagecalculate.service.WageCalculateService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

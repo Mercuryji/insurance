@@ -1,4 +1,4 @@
-package com.pingan.skycode.wagecalculate.dto;
+package com.skycode.insurance.wagecalculate.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -21,11 +21,6 @@ public class SalaryBasicInfoDTO {
     @NotNull(message = "税前月薪不可为空")
     @ApiModelProperty("税前月薪")
     private BigDecimal monSalaryBeforeTax;
-    /**
-     * 年终奖所得
-     */
-    @ApiModelProperty("年终奖所得")
-    private BigDecimal yearEndAwards;
     /**
      * 社保汇缴基数
      */
@@ -57,14 +52,6 @@ public class SalaryBasicInfoDTO {
 
     public void setMonSalaryBeforeTax(BigDecimal monSalaryBeforeTax) {
         this.monSalaryBeforeTax = monSalaryBeforeTax;
-    }
-
-    public BigDecimal getYearEndAwards() {
-        return yearEndAwards;
-    }
-
-    public void setYearEndAwards(BigDecimal yearEndAwards) {
-        this.yearEndAwards = yearEndAwards;
     }
 
     public BigDecimal getSocialSecurityRemiBas() {
