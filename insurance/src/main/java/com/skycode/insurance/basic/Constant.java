@@ -1,4 +1,4 @@
-package com.pingan.skycode.basic;
+package com.skycode.insurance.basic;
 
 import java.math.BigDecimal;
 

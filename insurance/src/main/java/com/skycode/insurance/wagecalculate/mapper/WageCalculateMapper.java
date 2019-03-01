@@ -1,4 +1,4 @@
-package com.pingan.skycode.wagecalculate.mapper;
+package com.skycode.insurance.wagecalculate.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 

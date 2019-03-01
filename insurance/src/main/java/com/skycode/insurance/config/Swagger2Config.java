@@ -1,4 +1,4 @@
-package com.pingan.skycode.config;
+package com.skycode.insurance.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +25,7 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.pingan.skycode.wagecalculate.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.skycode.insurance.wagecalculate.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

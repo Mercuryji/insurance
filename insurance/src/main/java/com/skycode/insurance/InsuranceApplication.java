@@ -1,11 +1,11 @@
-package com.pingan.skycode;
+package com.skycode.insurance;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.pingan.skycode.wagecalculate.mapper")
+@MapperScan("com.skycode.insurance.*.mapper")
 
 public class InsuranceApplication {
 

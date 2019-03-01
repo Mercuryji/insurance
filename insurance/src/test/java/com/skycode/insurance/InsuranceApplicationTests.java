@@ -1,4 +1,4 @@
-package com.pingan.skycode;
+package com.skycode.insurance;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
