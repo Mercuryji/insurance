@@ -19,31 +19,31 @@ public class SalaryBasicInfoDTO {
      * 税前月薪
      */
     @NotNull(message = "税前月薪不可为空")
-    @ApiModelProperty("税前月薪")
+    @ApiModelProperty(value = "税前月薪", required = true)
     private BigDecimal monSalaryBeforeTax;
     /**
      * 社保汇缴基数
      */
     @NotNull(message = "社保汇缴基数不可为空")
-    @ApiModelProperty("社保汇缴基数")
+    @ApiModelProperty(value = "社保汇缴基数", required = true)
     private BigDecimal socialSecurityRemiBas;
     /**
      * 公积金汇缴基数
      */
     @NotNull(message = "公积金汇缴基数不可为空")
-    @ApiModelProperty("公积金汇缴基数")
+    @ApiModelProperty(value = "公积金汇缴基数", required = true)
     private BigDecimal providentFundRemiBas;
     /**
      * 补充公积金汇缴基数
      */
     @NotNull(message = "补充公积金汇缴基数不可为空")
-    @ApiModelProperty("补充公积金汇缴基数")
+    @ApiModelProperty(value = "补充公积金汇缴基数", required = true)
     private BigDecimal suppleprovidentFundRemiBas;
     /**
      * 补充公积金汇缴比例
      */
     @NotNull(message = "补充公积金汇缴比例不可为空")
-    @ApiModelProperty("补充公积金汇缴比例")
+    @ApiModelProperty(value = "补充公积金汇缴比例", required = true)
     private Double suppleprovidentFundRemiRate;
 
     public BigDecimal getMonSalaryBeforeTax() {
