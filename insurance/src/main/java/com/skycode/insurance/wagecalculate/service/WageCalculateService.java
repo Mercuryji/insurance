@@ -69,38 +69,46 @@ public class WageCalculateService {
         BigDecimal rentHouseDeduct = new BigDecimal(0);
         //住房贷款扣除数
         BigDecimal houseLoanDeduct = new BigDecimal(0);
-
-        if(specialAddDeductionDTO.getChildUnderEduCount().intValue() <= 2){
-            childUnderEduDeduct = specialAddDeductionDTO.getChildUnderEduCount().multiply(Constant.CHILD_UNDER_EDU_DEDUCT);
-        }else{
-            childUnderEduDeduct = Constant.CHILD_UNDER_EDU_DEDUCT.multiply(new BigDecimal(2));
-        }
-
-        if(specialAddDeductionDTO.getHasOverSixtyMan().equals(Judge.YES.getStatus())){
-            oldManOverSixtyDeduct = Constant.OLD_MAN_OVER_SIXTY_DEDUCT.divide(new BigDecimal(specialAddDeductionDTO.getChildCountOfOldMan()));
-        }
-
-        if(specialAddDeductionDTO.getIsReceContinueEdu().equals(Judge.YES.getStatus())){
-            receiveContinuteEduDeduct = Constant.RECEIVE_CONTINUTE_DEDUCT;
-        }
-
-        if(specialAddDeductionDTO.getNotHasHouse().equals(Judge.YES.getStatus())){
-            String isCapitalCity = wageCalculateMapper.isCapitalCity(specialAddDeductionDTO.getWorkingCityCode());
-            String isManicipality = wageCalculateMapper.isManicipality(specialAddDeductionDTO.getWorkingCityCode());
-            String isGreaterCity = wageCalculateMapper.isGreaterCity(specialAddDeductionDTO.getWorkingCityCode());
-            if(isCapitalCity.equals(Judge.YES.getStatus()) || isManicipality.equals(Judge.YES.getStatus())){
-                rentHouseDeduct = Constant.MUNICIPALITY_CAPITAL_CITY_DEDUCT;
-            }else{
-                if(isGreaterCity.equals(Judge.YES.getStatus())){
-                    rentHouseDeduct = Constant.GREATER_CITY_DEDUCT;
-                }else if(isGreaterCity.equals(Judge.NO.getStatus())){
-                    rentHouseDeduct = Constant.SMALLER_CITY_DEDUCT;
+        if(null != specialAddDeductionDTO) {
+            if (null != specialAddDeductionDTO.getChildUnderEduCount()) {
+                if (specialAddDeductionDTO.getChildUnderEduCount().intValue() <= 2) {
+                    childUnderEduDeduct = specialAddDeductionDTO.getChildUnderEduCount().multiply(Constant.CHILD_UNDER_EDU_DEDUCT);
+                } else {
+                    childUnderEduDeduct = Constant.CHILD_UNDER_EDU_DEDUCT.multiply(new BigDecimal(2));
                 }
             }
-        }
 
-        if(specialAddDeductionDTO.getHasHouseLoan().equals(Judge.YES.getStatus())){
-            houseLoanDeduct = Constant.HOUSE_LOAN_DEDUCT;
+
+            if (null != specialAddDeductionDTO.getHasOverSixtyMan() && specialAddDeductionDTO.getHasOverSixtyMan().equals(Judge.YES.getStatus())) {
+                oldManOverSixtyDeduct = Constant.OLD_MAN_OVER_SIXTY_DEDUCT.divide(specialAddDeductionDTO.getChildCountOfOldMan());
+            }
+
+            if (null != specialAddDeductionDTO.getIsReceContinueEdu() && specialAddDeductionDTO.getIsReceContinueEdu().equals(Judge.YES.getStatus())) {
+                receiveContinuteEduDeduct = Constant.RECEIVE_CONTINUTE_DEDUCT;
+            }
+            if (null != specialAddDeductionDTO.getNotHasHouse()) {
+                if (specialAddDeductionDTO.getNotHasHouse().equals(Judge.YES.getStatus())) {
+                    String isCapitalCity = wageCalculateMapper.isCapitalCity(specialAddDeductionDTO.getWorkingCityCode());
+                    String isManicipality = wageCalculateMapper.isManicipality(specialAddDeductionDTO.getWorkingCityCode());
+                    String isGreaterCity = wageCalculateMapper.isGreaterCity(specialAddDeductionDTO.getWorkingCityCode());
+                    if(null != isCapitalCity && null != isManicipality && null !=isManicipality) {
+                        if (isCapitalCity.equals(Judge.YES.getStatus()) || isManicipality.equals(Judge.YES.getStatus())) {
+                            rentHouseDeduct = Constant.MUNICIPALITY_CAPITAL_CITY_DEDUCT;
+                        } else {
+                            if (isGreaterCity.equals(Judge.YES.getStatus())) {
+                                rentHouseDeduct = Constant.GREATER_CITY_DEDUCT;
+                            } else if (isGreaterCity.equals(Judge.NO.getStatus())) {
+                                rentHouseDeduct = Constant.SMALLER_CITY_DEDUCT;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            if (null != specialAddDeductionDTO.getHasHouseLoan() && specialAddDeductionDTO.getHasHouseLoan().equals(Judge.YES.getStatus())) {
+                houseLoanDeduct = Constant.HOUSE_LOAN_DEDUCT;
+            }
         }
         specialTaxDeduct = childUnderEduDeduct.add(oldManOverSixtyDeduct).add(receiveContinuteEduDeduct)
                 .add(rentHouseDeduct).add(houseLoanDeduct);
@@ -205,6 +213,7 @@ public class WageCalculateService {
         newAndOldTaxPayableDTO.setNewTaxPayable(newTaxPayable);
         return newAndOldTaxPayableDTO;
     }
+
     public WagecalculateDFO calcaulate(SalaryBasicInfoDTO salaryBasicInfoDTO, SpecialAddDeductionDTO specialAddDeductionDTO){
         WagecalculateDFO wagecalculateDFO = new WagecalculateDFO();
         //每月税前工资
@@ -222,6 +231,7 @@ public class WageCalculateService {
         BigDecimal newMonSalaryAfterTax = monSalaryBeforeTax.subtract(insuranceAndFund).subtract(newTaxPayable);
         wagecalculateDFO.setOldMonSalaryAfterTax(oldMonSalaryAfterTax);
         wagecalculateDFO.setNewMonSalaryAfterTax(newMonSalaryAfterTax);
+        wagecalculateDFO.setIncreasedIncome(newMonSalaryAfterTax.subtract(oldMonSalaryAfterTax));
         return wagecalculateDFO;
     }
 }
